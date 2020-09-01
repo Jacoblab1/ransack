@@ -41,7 +41,7 @@ module Polyamorous
       joins = make_join_constraints(join_root, join_type)
 
       joins.concat joins_to_add.flat_map { |oj|
-        construct_tables!(oj.join_root)
+        #construct_tables!(oj.join_root)
         if join_root.match?(oj.join_root) && join_root.table.name == oj.join_root.table.name
           walk join_root, oj.join_root, oj.join_type
         else

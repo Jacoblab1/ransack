@@ -37,7 +37,7 @@ module Polyamorous
         @references[table_name.to_sym] = table_name if table_name.is_a?(String)
       end unless references.empty?
       
-      construct_tables!(join_root)
+      #construct_tables!(join_root)
       joins = make_join_constraints(join_root, join_type)
 
       joins.concat joins_to_add.flat_map { |oj|
